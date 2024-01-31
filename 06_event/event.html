@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventListener</title>
+  </head>
+  <body>
+    <div id="owl" style="width: 100%; height: 30vh; background-color: blue">
+      <button class="b">c++</button>
+      <button class="c">python</button>
+      <button class="d">Ruby</button>
+      <!-- <button class="google">
+        <a href="https://www.google.com">Google</a>
+      </button> -->
+    </div>
+  </body>
+  <script>
+    document.getElementById("owl").addEventListener(
+      "click",
+      function () {
+        // console.log("event progragation or dubbling");
+      },
+      false
+    );
+
+    document.querySelector(".d").addEventListener("click", (e) => {
+      //   console.log("Ruby button is clicked.");
+      //   e.stopPropagation();
+    });
+
+    document.querySelector(".google").addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      //   console.log("Goole clicked");
+    });
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlKey, shiftKey, keyCode
+
+    document.querySelector("#owl").addEventListener("click", (e) => {
+      if (e.target.tagName === "button") {
+        const removeIt = e.target.parentNode;
+        removeIt.remove();
+      }
+    });
+  </script>
+</html>

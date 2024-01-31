@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chai our Code</title>
+  </head>
+  <body>
+    <script>
+      const div = document.createElement("div");
+      console.log(div);
+
+      // add class to div
+      div.className = "main";
+
+      // add id to div
+      //   div.id = "myId";
+      div.id = Math.round(Math.random() * 10 + 1);
+
+      //   Add Costum attribute
+      div.setAttribute("title", "generate class & id");
+
+      //   add styling
+      div.style.color = "white";
+      div.style.backgroundColor = "#f42";
+
+      //   adding content
+      div.innerText = "chai our code";
+
+      const addText = document.createTextNode("Chai Our Code");
+      div.appendChild(addText);
+
+      //   adding above element to the docuement
+      document.body.appendChild(div);
+    </script>
+  </body>
+</html>

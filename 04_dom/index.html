@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dom || chai our code</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="childOne">Monday</div>
+      <div class="child">Tuesday</div>
+      <div class="child">Wednesday</div>
+      <div class="child">Thursday</div>
+    </div>
+    <script>
+      const parent = document.querySelector(".parent");
+      //   console.log(parent);
+      //   console.log(parent.children[0]);
+      for (let i = 0; i < parent.children.length; i++) {
+        // console.log(parent.children[i].innerHTML);
+      }
+      parent.children[0].style.color = "red";
+
+      //   firstElementChild && lastElementChild
+      //   console.log(parent.firstElementChild.innerHTML); // get first child
+      //   console.log(parent.lastElementChild.innerHTML); // get last child
+
+      // parentElement
+      let first = document.querySelector(".childOne");
+      //   console.log(first);
+      //   console.log(first.parentElement);
+
+      //   nextElementSibling
+      //   console.log(first.nextElementSibling);
+
+      //
+      //
+      //   NodeList
+      console.log("Node : ", parent.childNodes);
+    </script>
+  </body>
+</html>
